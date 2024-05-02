@@ -1,0 +1,51 @@
+    1  apt install -y firewalld
+    2  systemctl start firewalld
+    3  systemctl enable firewalld
+    4  systemctl stats firewalld
+    5  systemctl status firewalld
+    6  apt install -y mariadb-server
+    7  systemctl start mariadb
+    8  systemctl enable mariadb
+    9  systemctl status mariadb
+   10  firewall-cmd --permanent --zone=public --add-port=3306/tcp
+   11  firewall-cmd --reload
+   12  mysql
+   13  cat > db-load-script.sql
+   14  mysql < db-load-script.sql
+   15  mysql
+   16  apt install -y apache2 php php-mysql
+   17  firewall-cmd --permanent --zone=public --add-port=80/tcp
+   18  firewall-cmd --reload
+   19  sudo sed -i 's/index.html/index.php/g' /etc/apache2/conf/apache2.conf
+   20  sudo sed -i 's/index.html/index.php/g' /etc/apache2/apache2.conf
+   21  systemctl start apache2
+   22  systemctl enable apache2
+   23  systemctl status apache2
+   24  apt install git
+   25  git clone https://github.com/billgateshemu/ecommerce.git
+   26  git add .
+   27  curl http://localhost
+   29  cd /var/www/html
+   31  ls
+   32  sudo mv index.html index_original.html
+   33  ls
+   40  sudo cp ecommerce /var/www/html/
+   41  ls
+   42  cd ecommerce
+   43  ls
+   45  sudo cp -r learning-app-ecommerce-master /var/www/html/
+   46  cd /var/www/html/
+   47  ls
+   48  vi index.php
+   49  cd ..
+   50  cd ..\
+   51  cd ..
+   52  cd html
+   53  cd /var/www/html/
+   54  ls
+   55  cd learning-app-ecommerce-master
+   56  ls
+   57  cd learning-app-ecommerce-master
+   58  ls
+   59  vi index.php
+   60  history
